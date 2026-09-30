@@ -1,0 +1,11 @@
+﻿apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: fastapi-service-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: fastapi-service
+  policyTypes:
+    - Ingress
+    - Egress
